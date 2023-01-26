@@ -1,4 +1,4 @@
-import express from 'express'
+import * as express from 'express'
 export function Server() {
-    const app: express.Application = express()
+    let app = express()
 }
