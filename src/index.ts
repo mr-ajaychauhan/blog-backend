@@ -30,11 +30,48 @@ async function startApolloServer() {
 
     // Modified server startup
     await new Promise((resolve) => app.listen({ port: 4000 }));
-    console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
-    console.log('hiiii');
+    console.log(`🚀 Server ready at http://localhost:4000${server}`);
+    console.log(server);
     
 }
 startApolloServer()
+
+
+
+
+///apolo 5 yrar ago start server methods
+
+// import "reflect-metadata";
+// import { ApolloServer } from "apollo-server-express";
+// import * as Express from "express";
+// import { Query, Resolver, buildSchema } from "type-graphql";
+
+// @Resolver()
+// class HelloResolver {
+//   @Query(() => String , {name:'helloWorld'})
+//   async hello() {
+//     return "Hello World!";
+//   }
+// }
+
+
+// const main = async () => {
+//   const schema = await buildSchema({
+//     resolvers: [HelloResolver]
+//   });
+
+//   const apolloServer = new ApolloServer({ schema });
+
+//   const app = Express();
+
+//   apolloServer.applyMiddleware({ app });
+
+//   app.listen(4000, () => {
+//     console.log("server started on http://localhost:4000/graphql");
+//   });
+// };
+
+// main();
 
 
 
