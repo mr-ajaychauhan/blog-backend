@@ -14,6 +14,8 @@ const userSchema: Schema = new Schema({
         require: true,
         minLength: 6,
     },
+    blogs: [{ type: Schema.Types.ObjectId, ref: "Blog" }],
+    comments: [{ type: Schema.Types.ObjectId, ref: "Comment" }]
 });
 
 export default model("User", userSchema);
